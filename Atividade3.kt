@@ -28,11 +28,13 @@ fun main() {
 
                 if (caixa >= preco) {
 
-                    caixa = caixa - preco   // forma completa (sem -=)
+                    caixa = caixa - preco 
 
                     precos[nome] = preco
 
-                    val quantidadeAtual = estoque.getOrDefault(nome, 0)
+                    val quantidadeAtual = estoque.getOrDefault(nome, 0) 
+                    //Se o produto existir → pega a quantidade real
+                    //Se não existir → considera que tem 0
                     estoque[nome] = quantidadeAtual + 1
 
                     println("Compra realizada com sucesso!")
